@@ -1,0 +1,176 @@
+﻿#hero .hero-car {
+    position: absolute;
+    width: clamp(320px, 55vw, 850px);
+    left: 50%;
+    bottom: 12%;
+    transform: translateX(-50%);
+    z-index: 5;
+    pointer-events: none;
+    aspect-ratio: 1512 / 485;
+}
+
+#hero .car-body {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+#hero .wheel {
+    position: absolute;
+    width: 16.2%;
+    height: auto;
+    z-index: 1;
+    transform-origin: 50% 50%;
+}
+
+#hero .wheel-front {
+    left: 12%;
+    top: 60%;
+}
+
+#hero .wheel-rear {
+    left: 72%;
+    top: 60%;
+}
+
+/* MG Sport - Car 2 */
+
+#hero .car-2 {
+    aspect-ratio: 2048 / 682;
+}
+
+    #hero .car-2 .wheel {
+        width: 15.04%;
+        height: auto;
+    }
+
+    #hero .car-2 .wheel-front {
+        left: 12%;
+        top: 51.5%;
+    }
+
+    #hero .car-2 .wheel-rear {
+        left: 71.1%;
+        top: 51.5%;
+    }
+
+/* Align cars to the same road level */
+
+#hero .hero-car {
+    bottom: 12%;
+}
+
+    /* Car 2 - adjust vertical position */
+    #hero .hero-car.car-2 {
+        bottom: 9%;
+    }
+
+#heroSlide1 .swiper-slide {
+    transition-property: opacity !important;
+}
+
+    #heroSlide1 .swiper-slide .th-hero-bg {
+        background-position: center center;
+        background-size: cover;
+    }
+
+
+/* Cinematic Hero Navigation */
+
+#hero {
+    position: relative;
+}
+
+    #hero .car-navigation {
+        position: absolute;
+        bottom: 35px;
+        left: 40px;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        direction: ltr;
+    }
+
+    #hero .car-nav-btn {
+        width: 52px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255,255,255,.45);
+        border-radius: 12px;
+        background: rgba(10,25,45,.25);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        transition: background .3s ease, border-color .3s ease, transform .3s ease;
+    }
+
+        #hero .car-nav-btn:hover:not(:disabled) {
+            background: #1261df;
+            border-color: #1261df;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        #hero .car-nav-btn:disabled {
+            opacity: .3;
+            cursor: not-allowed;
+        }
+
+@media (max-width: 767px) {
+    #hero .car-navigation {
+        left: 15px;
+        bottom: 20px;
+    }
+
+    #hero .car-nav-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+    }
+}
+
+
+#hero .hero-car .car-shadow {
+    position: absolute;
+    width: 88%;
+    height: 7%;
+    left: 6%;
+    top: 96%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 50%;
+    filter: blur(7px);
+    pointer-events: none;
+}
+
+#hero .hero-car .car-body,
+#hero .hero-car .wheel {
+    position: absolute;
+    z-index: 2;
+}
+
+
+
+/* نقطه روشن چراغ */
+#hero .hero-car.car-2 .car-light-glow {
+    position: absolute;
+    left: 8%;
+    top: 51%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 0 5px 2px rgba(255,255,255,.9), 0 0 12px 5px rgba(180,220,255,.5), 0 0 22px 8px rgba(120,190,255,.15);
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    pointer-events: none;
+}
+
+
